@@ -29,7 +29,7 @@ COMPATIBILITY_LIST_COMMIT_SHA="00709ad0aa83f174a09d567ed5a0b3a24d8a6817"
 LICENSE="GPL2+"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="qt5 qt6 sdl cubeb usb webengine webservice test"
+IUSE="qt5 qt6 sdl cubeb usb webengine +webservice test"
 
 RDEPEND="
 	<net-libs/mbedtls-3.1[cmac]
@@ -109,8 +109,9 @@ src_prepare() {
 		src/core/CMakeLists.txt || die
 
 	# Unbundle cubeb
-	use cubeb && sed -i '$afind_package(Threads REQUIRED)' CMakeLists.txt || die
-	sed -i '/^if.*cubeb/,/^endif()/d' externals/CMakeLists.txt || die
+	use cubeb && \
+		sed -i '$afind_package(Threads REQUIRED)' CMakeLists.txt && \
+		sed -i '/^if.*cubeb/,/^endif()/d' externals/CMakeLists.txt
 
 	# Unbundle enet
 	sed -i -e '/^if.*enet/,/^endif()/d' externals/CMakeLists.txt || die
