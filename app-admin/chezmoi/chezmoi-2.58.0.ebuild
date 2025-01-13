@@ -12,7 +12,7 @@ SRC_URI+=" https://github.com/tsln1998/gentoo-deps/releases/download/${P}/${P}-v
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 RDEPEND="dev-vcs/git"
 RDEPEND+=" !app-admin/chezmoi-bin"
