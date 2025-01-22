@@ -11,7 +11,7 @@ HOMEPAGE="https://buildpacks.io https://paketo.io https://github.com/buildpacks/
 SRC_URI="https://github.com/buildpacks/pack/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 SRC_URI+=" https://github.com/tsln1998/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
 
-S="${WORKDIR}/${P}/cmd/pack"
+S="${WORKDIR}/pack-${PV}/cmd/pack"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -23,7 +23,7 @@ RDEPEND="
 		app-containers/podman
 	)
 "
-RDEPEND+=" !dev-util/pack-bin"
+RDEPEND+=" !dev-util/pack-cli-bin"
 BDEPEND=">=dev-lang/go-1.23.0"
 
 src_compile() {

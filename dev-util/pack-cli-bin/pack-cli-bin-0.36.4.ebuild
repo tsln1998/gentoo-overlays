@@ -23,7 +23,7 @@ RDEPEND="
 		app-containers/podman
 	)
 "
-RDEPEND+=" !dev-util/pack"
+RDEPEND+=" !dev-util/pack-cli"
 
 src_install() {
 	dobin pack
