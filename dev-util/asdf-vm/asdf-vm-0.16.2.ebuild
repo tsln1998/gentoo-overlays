@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module bash-completion-r1
+inherit go-module
 
 DESCRIPTION="Manage all your runtime versions with one tool"
 HOMEPAGE="https://github.com/asdf-vm/asdf"
