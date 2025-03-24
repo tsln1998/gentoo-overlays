@@ -1,3 +1,10 @@
+test:
+    #!/usr/bin/env bash
+    for pkg in $(git status -s | grep '^??' | awk '{print $2}' | grep '\.ebuild$'); do
+        sudo ebuild $pkg package --skip-manifest
+        sudo ebuild $pkg manifest
+    done
+
 sync-all:
     just sync dev-util/asdf-vm
     just sync dev-util/vfox
