@@ -6,6 +6,6 @@
 		<name>Tsln</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">app-benchmarks/ghz-bin</remote-id>
+		<remote-id type="github">dev-util/moon-bin</remote-id>
 	</upstream>
 </pkgmetadata>
