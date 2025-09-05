@@ -17,6 +17,10 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
+RDEPEND="
+	dev-util/proto-bin
+"
+
 src_install() {
 	newbin ${P} moon
 }
