@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=Simple gRPC benchmarking and load testing tool
+EAPI=8
+HOMEPAGE=https://ghz.sh/ https://github.com/bojand/ghz
+KEYWORDS=~amd64 ~arm64
+LICENSE=Apache-2.0
+SLOT=0
+SRC_URI=amd64? ( https://github.com/bojand/ghz/releases/download/v0.120.0/ghz-linux-x86_64.tar.gz ) arm64? ( https://github.com/bojand/ghz/releases/download/v0.120.0/ghz-linux-arm64.tar.gz )
+_md5_=1a1c8eefc0c1b59210b98b68da570e8a
