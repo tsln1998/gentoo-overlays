@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=A build system and monorepo management tool for the web ecosystem, written in Rust.
+EAPI=8
+HOMEPAGE=https://moonrepo.dev/moon https://github.com/moonrepo/moon
+KEYWORDS=~amd64 ~arm64
+LICENSE=MIT
+RDEPEND=dev-util/proto-bin
+SLOT=0
+SRC_URI=amd64? ( https://github.com/moonrepo/moon/releases/download/v1.40.2/moon-x86_64-unknown-linux-gnu -> moon-bin-1.40.2-x86_64 ) arm64? ( https://github.com/moonrepo/moon/releases/download/v1.40.2/moon-aarch64-unknown-linux-gnu -> moon-bin-1.40.2-aarch64 )
+_md5_=706115977473e560914d4a59ad4ca392

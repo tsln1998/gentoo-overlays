@@ -7,8 +7,8 @@ DESCRIPTION="A pluggable multi-language version manager."
 HOMEPAGE="https://moonrepo.dev/proto https://github.com/moonrepo/proto"
 
 SRC_URI="
-	amd64? ( https://github.com/moonrepo/proto/releases/download/v${PV}/proto_cli-x86_64-unknown-linux-gnu.tar.xz )
-	arm64? ( https://github.com/moonrepo/proto/releases/download/v${PV}/proto_cli-aarch64-unknown-linux-gnu.tar.xz )
+	amd64? ( https://github.com/moonrepo/proto/releases/download/v${PV}/proto_cli-x86_64-unknown-linux-gnu.tar.xz -> ${P}-x86_64.tar.xz )
+	arm64? ( https://github.com/moonrepo/proto/releases/download/v${PV}/proto_cli-aarch64-unknown-linux-gnu.tar.xz -> ${P}-aarch64.tar.xz )
 "
 
 S="${WORKDIR}"

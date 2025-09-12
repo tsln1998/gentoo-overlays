@@ -7,8 +7,8 @@ DESCRIPTION="A build system and monorepo management tool for the web ecosystem, 
 HOMEPAGE="https://moonrepo.dev/moon https://github.com/moonrepo/moon"
 
 SRC_URI="
-	amd64? ( https://github.com/moonrepo/moon/releases/download/v${PV}/moon-x86_64-unknown-linux-gnu -> ${P} )
-	arm64? ( https://github.com/moonrepo/moon/releases/download/v${PV}/moon-aarch64-unknown-linux-gnu -> ${P} )
+	amd64? ( https://github.com/moonrepo/moon/releases/download/v${PV}/moon-x86_64-unknown-linux-gnu -> ${P}-x86_64 )
+	arm64? ( https://github.com/moonrepo/moon/releases/download/v${PV}/moon-aarch64-unknown-linux-gnu -> ${P}-aarch64 )
 "
 
 S="${DISTDIR}"
@@ -22,5 +22,8 @@ RDEPEND="
 "
 
 src_install() {
-	newbin ${P} moon
+	(use amd64 && mv ${P}-x86_64 moon) ||  \
+	(use arm64 && mv ${P}-aarch64 moon) || \
+		die "Unsupported architecture"
+	dobin moon
 }

@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=A pluggable multi-language version manager.
+EAPI=8
+HOMEPAGE=https://moonrepo.dev/proto https://github.com/moonrepo/proto
+KEYWORDS=~amd64 ~arm64
+LICENSE=MIT
+SLOT=0
+SRC_URI=amd64? ( https://github.com/moonrepo/proto/releases/download/v0.52.3/proto_cli-x86_64-unknown-linux-gnu.tar.xz -> proto-bin-0.52.3-x86_64.tar.xz ) arm64? ( https://github.com/moonrepo/proto/releases/download/v0.52.3/proto_cli-aarch64-unknown-linux-gnu.tar.xz -> proto-bin-0.52.3-aarch64.tar.xz )
+_md5_=cb4f848167817bd6846f9b5bf1e75265
